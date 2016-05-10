@@ -3,7 +3,12 @@
 Copyright 2007 Peter Norvig. 
 Open source code under MIT license: http://www.opensource.org/licenses/mit-license.php
 
-Copy big.txt from: http://norvig.com/big.txt
+The original version is http://norvig.com/spell-correct.html
+
+Code from:
+http://norvig.com/spell.py
+big.txt from: 
+http://norvig.com/big.txt
 """
 
 import re, collections
