@@ -64,20 +64,13 @@ The data files associated with this project are my first attempt at gathering da
 - LeisureCategories.dat
 
 ### Training data
-**Just under 3,000 records of Magazines in various leisure categories and another nearly 3,000 records of magazines in various leisure categories **
 
-- NonLeisureMagazines.dat
-- LeisureMagazines.dat
+4734 rows of data split between the various leisure categories and the unclassified category.
 
-### Results of manual categorisation
+- TrainingData.dat
 
-- ManualResults.dat
+### Test data
 
-### Data to be classified with duplicate barcodes, multiple identical lines plus different descriptions for same item 
-
-- AllInputData.dat
-
-### Data to be classified with no duplicate barcodes
-
-- SingleEntryInputData.dat
+- TestData.dat - 2142 rows of categorised data with duplicate rows that have variations in the text description
+- TestDataNoDups.dat - 1305 rows of categorised data with no duplicate rows the text description has been picked at random
 
