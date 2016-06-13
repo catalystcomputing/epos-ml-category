@@ -20,7 +20,7 @@ creatdescdict <- function(eposdata){
 
 # Main Steps
 # Read the data from training set
-eposdata <- read.csv("F:/Raj/Futuretext/PythonScripts/epos-ml-category-master/data/TrainingData.dat",sep="\t")
+eposdata <- read.csv("../../data/TrainingData.dat",sep="\t")
 # Convert description as Characters.
 eposdata$Description = as.character(eposdata$Description)
 # Remove last digit from barcode as its check bit
