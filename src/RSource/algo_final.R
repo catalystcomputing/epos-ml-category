@@ -1,7 +1,11 @@
+#Required packages. if not installed, please install them first.
+library(stringr)
+library(quanteda)
+library(caret)
+
+## Function to Create dictionary list with all description available for
+## each category.
 creatdescdict <- function(eposdata){
-  ## Function to Create dictionary list with all description available for
-  ## each category.
-  
   # Find unique category & coerce in to format needed.
   uc <- unique(eposdata$Category)
   uc <- paste(uc, collapse=",")
@@ -27,7 +31,6 @@ eposdata$Description = as.character(eposdata$Description)
 eposdata$Barcode1less = floor(eposdata$Barcode/10)
 # Only select Barcode, Description and category. Dropped Unit Price.
 eposdata <- eposdata[,c(2,4,7)]
-library(quanteda)
 # Create dictionary for the 38 unique categories.
 descdict <- dictionary(creatdescdict(eposdata))
 #Create feature vectors
@@ -38,7 +41,6 @@ transdata <- cbind(eposdata, desc_vector)
 transdata <- transdata[,-1]
 
 #Split data in to train and test
-library(caret)
 set.seed(1976)
 trainIndex <- createDataPartition(transdata$Category, p=0.7,list = FALSE)
 traindata <- transdata[trainIndex,]
